@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+</head>
+<body>
+    <h1>API Documentation</h1>
+    <p>Welcome to the API documentation of my project. Below is a list of available endpoints and their descriptions.</p>
+
+    <h2>Events Endpoints</h2>
+    <ul>
+        <li>
+            <strong>GET /api/events</strong>
+            <p>Retrieve a paginated list of events. Supports sorting and pagination.</p>
+            <p><strong>Query Parameters:</strong></p>
+            <ul>
+                <li><strong>limit</strong> (optional): Number of events to return. Default: 10.</li>
+                <li><strong>offset</strong> (optional): Number of events to skip. Default: 0.</li>
+                <li><strong>sortBy</strong> (optional): Field to sort by (e.g., <code>date</code>, <code>title</code>).</li>
+                <li><strong>sortOrder</strong> (optional): Sorting order (<code>asc</code> or <code>desc</code>).</li>
+            </ul>
+            <p><strong>Example:</strong></p>
+            <p><code>GET /api/events?limit=5&offset=10&sortBy=title&sortOrder=asc</code></p>
+        </li>
+        <li>
+            <strong>GET /api/events/:id</strong>
+            <p>Retrieve details of a specific event by its ID.</p>
+        </li>
+        <li>
+            <strong>POST /api/events</strong>
+            <p>Create a new event.</p>
+            <p><strong>Body:</strong> JSON object containing <code>title</code>, <code>description</code>, <code>date</code>, and <code>location</code>.</p>
+        </li>
+        <li>
+            <strong>PUT /api/events/:id</strong>
+            <p>Update an existing event by its ID.</p>
+            <p><strong>Body:</strong> JSON object with fields to update.</p>
+        </li>
+        <li>
+            <strong>DELETE /api/events/:id</strong>
+            <p>Delete a specific event by its ID.</p>
+        </li>
+        <li>
+          <strong>GET /api/events/search</strong>
+          <p>Search for events based on specific fields.</p>
+          <p><strong>Query Parameters:</strong></p>
+          <ul>
+              <li><strong>title</strong> (optional): Search events by title.</li>
+              <li><strong>location</strong> (optional): Search events by location.</li>
+              <li><strong>date</strong> (optional): Search events by a specific date (format: YYYY-MM-DD).</li>
+          </ul>
+      </li>
+    </ul>
+
+    <h2>Tickets Endpoints</h2>
+    <ul>
+        <li>
+            <strong>GET /api/tickets</strong>
+            <p>Retrieve a paginated list of tickets. Supports sorting and pagination.</p>
+        </li>
+        <li>
+            <strong>GET /api/tickets/:id</strong>
+            <p>Retrieve details of a specific ticket by its ID.</p>
+        </li>
+        <li>
+            <strong>POST /api/tickets</strong>
+            <p>Create a new ticket for an event.</p>
+            <p><strong>Body:</strong> JSON object containing <code>event</code> (event ID), <code>price</code>, <code>quantity</code>, and <code>status</code>.</p>
+        </li>
+        <li>
+            <strong>PUT /api/tickets/:id</strong>
+            <p>Update an existing ticket by its ID.</p>
+            <p><strong>Body:</strong> JSON object with fields to update.</p>
+        </li>
+        <li>
+            <strong>DELETE /api/tickets/:id</strong>
+            <p>Delete a specific ticket by its ID.</p>
+        </li>
+    </ul>
+
+    <h2>Charities Endpoints</h2>
+    <ul>
+        <li>
+            <strong>GET /api/charities</strong>
+            <p>Retrieve all charities.</p>
+        </li>
+        <li>
+            <strong>POST /api/charities</strong>
+            <p>Create new charities. Accepts an array of charity objects.</p>
+            <p><strong>Body:</strong> JSON array containing objects with <code>title</code>, <code>description</code>, <code>date</code>, and <code>location</code>.</p>
+        </li>
+        <li>
+            <strong>PUT /api/charities/:id</strong>
+            <p>Update an existing charity by its ID.</p>
+            <p><strong>Body:</strong> JSON object with fields to update.</p>
+        </li>
+        <li>
+            <strong>DELETE /api/charities/:id</strong>
+            <p>Delete a specific charity by its ID.</p>
+        </li>
+        <li>
+            <strong>GET /api/charities/search</strong>
+            <p>Search for charities based on specific fields.</p>
+            <p><strong>Query Parameters:</strong></p>
+            <ul>
+                <li><strong>title</strong> (optional): Search charities by title.</li>
+                <li><strong>location</strong> (optional): Search charities by location.</li>
+                <li><strong>date</strong> (optional): Search charities by a specific date (format: YYYY-MM-DD).</li>
+            </ul>
+        </li>
+    </ul>
+
+
+    <h2>Usage</h2>
+    <p>Use tools like Postman or curl to test these endpoints. Ensure your server is running on <code>http://localhost:3000</code> or the appropriate host.</p>
+</body>
+</html>

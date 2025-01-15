@@ -1,5 +1,5 @@
 import Event from '../models/Event.js';
-import mongoose from 'mongoose'; // Add this line to import mongoose
+import mongoose from 'mongoose'; 
 import Ticket from '../models/Ticket.js';
 import Joi from 'joi';
 

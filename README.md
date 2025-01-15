@@ -18,15 +18,23 @@ This is a Node.js project demonstrating CRUD (Create, Read, Update, Delete) func
 ### 1. Clone the Repository
 ```bash
 https://github.com/HamzaKh46/Events.git
+```
+```bash
 cd NodeProject
 ```
 
 ### 2. Install Dependecies
+```bash
 npm install
+```
 
 ### 3. Seed the Database (Optional)
+```bash
 node ./backend/seed.js
+```
 This will seed the events and tickets collections with predefined sample data.
 
 ### 4. Start The Server
+```bash
 npm run dev
+```

@@ -19,6 +19,7 @@ This is a Node.js project demonstrating CRUD (Create, Read, Update, Delete) func
 ```bash
 https://github.com/HamzaKh46/Events.git
 cd NodeProject
+```
 
 ### 2. Install Dependecies
 npm install
